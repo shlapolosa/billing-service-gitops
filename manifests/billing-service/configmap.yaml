@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: billing-service-config
+  namespace: billing-service
+data:
+  APP_ENV: "production"
+  SERVICE_NAME: "billing-service"
+  DATABASE_URL: "postgresql://$DATABASE_USER:$DATABASE_PASSWORD@billing-service-postgres-rw.billing-service.svc.cluster.local:5432/billing-service"
